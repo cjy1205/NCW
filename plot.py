@@ -8,6 +8,7 @@ plt.rc('font', family='Times New Roman')
 def plot_geopotential_and_wind(zc, uc, vc, ax=None, vmin=None, vmax=None, experiment=''):
     """
     绘制500hPa位势高度场和风场矢量图。
+    111
     参数:
         zc: 2D数组，位势高度场数据
         uc: 2D数组，u方向风速
@@ -27,7 +28,6 @@ def plot_geopotential_and_wind(zc, uc, vc, ax=None, vmin=None, vmax=None, experi
     contour = ax.contour(X, Y, zc, levels=10, colors='black', linewidths=0.4,
                           alpha=0.6)
     ax.clabel(contour, inline=True, fontsize=8, fmt='%1.0f')  # 添加等高线标签
-    # ax.clabel(contourf, inline=True, fontsize=8)
     ax.set_title(f'500hPa Geopotential Height ({experiment})', fontsize=20)
     ax.set_xlabel('Longitude Index')
     ax.set_ylabel('Latitude Index')
